@@ -13,5 +13,6 @@ export function capitalize(text) {
 
 export function truncate(text, max) {
   if (text.length <= max) return text;
+  if (max <= 0) return "";
   return text.slice(0, max - 1) + "…";
 }

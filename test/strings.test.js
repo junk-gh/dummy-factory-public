@@ -15,3 +15,8 @@ test("truncate", () => {
   assert.equal(truncate("short", 10), "short");
   assert.equal(truncate("a longer sentence", 8), "a longe…");
 });
+
+test("truncate to zero characters", () => {
+  assert.equal(truncate("hello", 0), "");
+  assert.equal(truncate("", 0), "");
+});
